@@ -1,6 +1,6 @@
 from datetime import datetime
 from time import sleep
-from os import system as send_command
+from subprocess import call as send_command
 
 
 def killing_time_request():
@@ -23,5 +23,5 @@ def kill_all_fun(killing_time):
         current_time = datetime.now().time()
         if current_time >= killing_time:
             print("TIME TO DIE!")
-            send_command("pkill -f Steam")
+            send_command('pkill -f Steam', shell=True)
             exit()
