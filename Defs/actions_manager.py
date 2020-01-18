@@ -14,8 +14,7 @@ def killing_time_request():
     if confirmation == "Y":
         print("GOOD!")
         return(killing_time_HHMM).time()
-    else:
-        killing_time_request()
+    killing_time_request()
 
 
 def kill_all_fun(killing_time):
